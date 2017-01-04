@@ -3,6 +3,7 @@
 
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
+ 
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGOLAB_URI
 
@@ -60,7 +61,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a web site...2017010301');
+  res.status(200).send('I dream of being a web site.');
 });
 //-----------------------------------xxx3
 var port = process.env.PORT || 1337;
